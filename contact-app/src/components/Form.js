@@ -34,7 +34,7 @@ class Form extends Component {
     event.preventDefault();
   };
   render() {
-    const {username,comments,topic} = this.state;
+    const { username, comments, topic } = this.state;
     return (
       <form onSubmit={this.handleSubmit}>
         <div>

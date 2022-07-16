@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import "./App.css";
+import PostForm from "./PostForm";
+// import PostList from "./PostList";
 // import Inline from "./Inline";
 // import NameList from "./NameList";
 // import Stylesheet from "./Stylesheet";
@@ -16,13 +18,21 @@ import "./App.css";
 // import styles from '../appStyles.module.css'
 // import Form from './Form'
 // import LifecycleA from "./LifecycleA";
-import LifecycleC from "./LifecycleC";
+// import LifecycleC from "./LifecycleC";
 
 class App extends Component {
+  shouldComponentUpdate(nextProps, nextState) {
+    console.log("props = ", this.props);
+    console.log("next props = ", nextProps);
+    return true;
+  }
   render() {
     return (
       <div className="App">
-      <LifecycleC></LifecycleC>
+        <PostForm></PostForm>
+        {/* <PostList/> */}
+        {/* <Message></Message> */}
+        {/* <LifecycleC></LifecycleC> */}
         {/* <LifecycleA></LifecycleA> */}
         {/* <Form></Form> */}
         {/* <Inline></Inline> */}
@@ -53,5 +63,7 @@ class App extends Component {
     );
   }
 }
+
+App.whyDidYouRender = true;
 
 export default App;
